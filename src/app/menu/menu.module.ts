@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportComponent } from './report/report.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule,  } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
+
 
 
 
@@ -10,10 +16,14 @@ import { ReportComponent } from './report/report.component';
   declarations: [
     HomeComponent,
     DashboardComponent,
-    ReportComponent
+    ReportComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserModule 
   ]
 })
 export class MenuModule { }
