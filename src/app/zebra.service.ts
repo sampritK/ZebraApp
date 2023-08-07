@@ -32,22 +32,29 @@ export class ZebraService {
   
 // }
 
-
-
   private apiUrl = 'https://api.zebra.com/v2/data/devices/batteries/analytics/visibility/critical-battery-events';
 
   private headers = new HttpHeaders({
     "X-APIKey" : "fzzEAqmVsALrgmYvNQ7brG4G9GCNAtNU",
     "partnerName": "PARTNER DEMO",
     "companyName": "DEMO COMPANY 2",
-    "startDatetime": "2023-08-03T00:00:00Z",
-    "endDatetime": "2023-08-04T00:00:00Z"
+    "Startdatetime": "2023-08-03T00:00:00Z",
+    "Enddatetime": "2023-08-04T00:00:00Z"
   });
 
-  // Example function to make an API request with custom headers
+
+  // headers = new HttpHeaders()
+  // .set('X-APIKey', 'fzzEAqmVsALrgmYvNQ7brG4G9GCNAtNU')
+  // .set('partnerName','PARTNER DEMO')
+  // .set('companyName', 'DEMO COMPANY 2')
+  // .set('startDatetime', '2023-08-03T00:00:00Z')
+  // .set('endDatetime', '2023-08-04T00:00:00Z');
+
+
   getWithHeaders(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}`, { headers:this.headers});
+    return this.http.get<any>(this.apiUrl,{headers:this.headers});
   }
+
 }
 
 

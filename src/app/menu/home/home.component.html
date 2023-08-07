@@ -4,7 +4,7 @@
         <h1>Wellcome to ZebraApp</h1>
     </div>
 
-    <!-- <table class="table">
+    <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -19,21 +19,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of  Headers">
+          <tr *ngFor="let item of  datas; let i = index">
             
             <th scope="row">1</th>
-            <td>{{item.assetName}}</td>
+            <td>{{item.data[i]}}</td>
+            <!-- <td>{{item.data[0]}}</td>
             <td>{{item.batteryCriticalEvents}}</td>
             <td>{{item.fullModel}}</td>
             <td>{{item.deviceType}}</td>
             <td>{{item.model}}</td>
             <td>{{item.serialNum}}</td>
             <td>{{item.siteHierarchy}}</td>
-            <td>{{item.siteName}}</td>
+            <td>{{item.siteName}}</td> -->
           </tr>
           
         </tbody>
-      </table> -->
+      </table>
 
   
  

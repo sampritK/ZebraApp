@@ -54,7 +54,7 @@ constructor(private zebra:ZebraService){}
 ngOnInit(): void {
   this.zebra.getWithHeaders().subscribe((res)=>{
     this.datas = res;
-    console.log(this.datas);
+    console.log(res);
   })
 }
 
